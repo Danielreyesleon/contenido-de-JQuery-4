@@ -1,2 +1,3 @@
 # contenido-de-JQuery-4
-estos son unos ejemplos de como se usa JQuery 4
+
+Estos son ejemplos de cómo usar jQuery 4, utilizados para un video en colaboración con Codingrap.
