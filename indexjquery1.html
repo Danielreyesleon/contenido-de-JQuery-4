@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo 1 JQuery</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <header>esto es una primera prueba</header>
+    <div id="box1">
+</div>
+    <button type="button" id="saludar">Saludar</button> 
+    <button type="button" id="modificar">modificar</button>
+    <button type="button" id="eliminar">eliminar</button>
+
+
+    <p>esto es un ejemplo</p>
+
+
+<script>
+$("#saludar").click(function(){
+    $("p").append(" Hola daniel soy JQuery");
+});
+$("#modificar").click(function(){
+    $("p").text("hola soy daniel y estoy modificando el texto");
+});
+$("#eliminar").click(function(){
+    $("p").remove();
+    alert("texto eliminado")
+});
+$(document).ready(function(){
+    $("header").css("color", "blue");
+});
+$("#box1").hover(function(){
+    $(this).css("background-color", "red");
+});
+
+</script>
+ <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+        #p{
+            color: red;
+            font: 16px Arial, sans-serif;
+            font-weight: bold;
+
+        }
+ </style>
+
+</body>
+</html>

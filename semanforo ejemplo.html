@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semáforo  Practica</title>
+
+    
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <style>
+        #semaforo {
+            width: 100px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 50px auto;
+            padding-top: 10px;
+        }
+
+        #luz-roja, #luz-amarilla, #luz-verde {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px auto;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="semaforo">
+    <div id="luz-roja"></div>
+    <div id="luz-amarilla"></div>
+    <div id="luz-verde"></div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    function cambiarSemaforo() {
+        $("#luz-roja").css("background-color", "red");
+        $("#luz-amarilla").css("background-color", "gray");
+        $("#luz-verde").css("background-color", "gray");
+
+        setTimeout(function(){
+            $("#luz-roja").css("background-color", "gray");
+            $("#luz-amarilla").css("background-color", "yellow");
+        }, 2000);
+
+        setTimeout(function(){
+            $("#luz-amarilla").css("background-color", "gray");
+            $("#luz-verde").css("background-color", "green");
+        }, 4000);
+    }
+
+    cambiarSemaforo();
+    setInterval(cambiarSemaforo, 6000);
+});
+</script>
+
+</body>
+</html>
